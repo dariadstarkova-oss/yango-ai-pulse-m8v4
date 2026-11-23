@@ -1,0 +1,89 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>ИИ в маркетинге: опрос CMO</title><style>
+  :root { --red:#FF0000; --black:#050505; --g1:#F5F5F5; --g2:#E1E1E1; --text:#1a1a1a; --muted:#6b6b6b; --ok:#1f9d55; --mid:#d18b00; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--text); background:#fff; line-height:1.45; }
+  header { background:var(--black); color:#fff; padding:36px 20px 28px; }
+  .wrap { max-width:860px; margin:0 auto; padding:0 20px; }
+  header .wrap { padding:0; }
+  .tag { display:inline-block; background:var(--red); color:#fff; font-weight:700; font-size:12px; letter-spacing:.06em; text-transform:uppercase; padding:5px 10px; border-radius:100px; }
+  h1 { font-size:30px; line-height:1.15; margin:14px 0 10px; }
+  header p { color:#cfcfcf; margin:6px 0; font-size:16px; }
+  h2 { font-size:22px; margin:40px 0 6px; }
+  h2 .num { color:var(--red); margin-right:8px; }
+  .lead { color:var(--muted); margin:0 0 16px; }
+  .card { background:var(--g1); border-radius:22px; padding:20px 22px; margin:14px 0; }
+  .intro p { margin:8px 0; }
+  .item { background:var(--g1); border-radius:22px; padding:18px 20px; margin:12px 0; border:2px solid transparent; transition:border-color .15s; }
+  .item.s-agree { border-color:var(--ok); }
+  .item.s-discuss { border-color:var(--mid); }
+  .item.s-other { border-color:var(--red); }
+  .item .id { font-weight:700; color:var(--red); font-size:13px; letter-spacing:.04em; }
+  .item h3 { margin:4px 0 8px; font-size:18px; }
+  .item .why { color:var(--muted); font-size:14px; margin:6px 0 0; }
+  .item .why b { color:var(--text); }
+  .btns { display:flex; gap:8px; flex-wrap:wrap; margin-top:14px; }
+  .btns button { border:0; border-radius:100px; padding:10px 16px; font-weight:700; font-size:14px; cursor:pointer; background:var(--g2); color:var(--black); }
+  .btns button.on[data-v="agree"] { background:var(--ok); color:#fff; }
+  .btns button.on[data-v="discuss"] { background:var(--mid); color:#fff; }
+  .btns button.on[data-v="other"] { background:var(--red); color:#fff; }
+  .cm { display:none; margin-top:10px; }
+  .item.s-discuss .cm, .item.s-other .cm, .item.open .cm { display:flex; gap:8px; align-items:flex-start; }
+  textarea { flex:1; min-height:64px; border:1px solid var(--g2); border-radius:14px; padding:10px 12px; font:inherit; font-size:14px; resize:vertical; background:#fff; }
+  .mic { border:0; background:var(--black); color:#fff; border-radius:100px; width:44px; height:44px; font-size:18px; cursor:pointer; flex:none; }
+  .mic.rec { background:var(--red); animation:p 1s infinite; }
+  @keyframes p { 50% { opacity:.6; } }
+  .addc { background:none; border:0; color:var(--muted); text-decoration:underline; cursor:pointer; font-size:13px; padding:8px 0 0; }
+  .open-q textarea { width:100%; }
+  .bar { position:sticky; bottom:0; background:#fff; border-top:1px solid var(--g2); padding:12px 0; margin-top:30px; }
+  .bar .wrap { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+  .progress { flex:1; min-width:160px; font-size:14px; color:var(--muted); }
+  .main { border:0; border-radius:100px; padding:13px 20px; font-weight:700; font-size:15px; cursor:pointer; background:var(--red); color:#fff; }
+  .sec { border:0; border-radius:100px; padding:13px 20px; font-weight:700; font-size:15px; cursor:pointer; background:var(--black); color:#fff; }
+  .toast { position:fixed; left:50%; bottom:90px; transform:translateX(-50%); background:var(--black); color:#fff; padding:10px 16px; border-radius:100px; font-size:14px; display:none; }
+  @media (max-width:600px) {
+    h1 { font-size:24px; }
+    .bar { padding:8px 0; }
+    .bar .wrap { flex-wrap:nowrap; gap:6px; }
+    .progress { min-width:0; font-size:12px; }
+    .main, .sec { padding:10px 12px; font-size:13px; white-space:nowrap; }
+    #dl { display:none; }
+  }
+  ul.tight { margin:6px 0; padding-left:20px; } ul.tight li { margin:3px 0; }
+  footer { color:var(--muted); font-size:13px; padding:20px 0 40px; }
+
+.row{margin:16px 0}.row label{display:block;font-weight:600;margin-bottom:6px}.tools{display:none}.active .tools{display:block}input,select{width:100%;font:inherit;padding:12px;border:1px solid #ccc;border-radius:12px;background:white}textarea{width:100%;min-height:70px}button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px solid #FF0000;outline-offset:3px}.btns button.on{background:#050505;color:#fff}.twocol{display:grid;grid-template-columns:1fr 1fr;gap:16px}.missing{border-color:#ff0000}#report{width:100%;min-height:300px}dialog{width:min(90%,760px);border:0;border-radius:20px;padding:24px}dialog::backdrop{background:#0008}@media(max-width:600px){.twocol{grid-template-columns:1fr}.wrap{padding:0 16px}.item{padding:16px}button{min-height:44px}}.benchmark{background:white;border-left:3px solid #FF0000;padding:12px 14px;font-size:14px}.lead{font-size:16px}.item p{margin:10px 0}input::placeholder,textarea::placeholder{color:#666}select{font-size:16px}.version{font-size:13px;color:#ccc}summary{cursor:pointer;font-weight:600}details p:last-child{margin-bottom:0}.item .btns button{font-size:14px;text-align:left;line-height:1.35}.benchmark{margin:10px 0}.item h3{font-size:20px}.row label{font-size:16px}.blockers{display:none}.notusing .blockers{display:block}.blockers{padding:0 0 4px}.blockers .row label{font-size:14px;color:#555}.version{margin-top:10px}@media(max-width:600px){.bar .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}.bar .progress{grid-column:1/-1;white-space:nowrap;font-size:13px}.bar button{width:100%;min-width:0;white-space:normal;padding:10px 8px}.bar{padding:10px 0}.toast{max-width:calc(100vw - 32px);width:max-content;border-radius:16px;bottom:110px;font-size:14px}}
+.item h2,.card h2{font-size:21px;margin:0 0 8px}.taskrow{display:grid;grid-template-columns:minmax(0,1fr) 235px;gap:14px;align-items:center;padding:10px 0}.taskrow label{font-size:16px}.item .lead{font-size:15px;margin-bottom:8px}.tool-extra,.reason-extra{display:none;margin-top:12px}.hasai .tool-extra,.manual .reason-extra{display:block}.card textarea{margin-top:12px}.card details{margin-top:14px}.row{margin:12px 0}@media(max-width:600px){.taskrow{grid-template-columns:1fr;gap:6px}.item h2,.card h2{font-size:19px}}</style></head><body><header><div class="wrap"><span class="tag">Yango · опрос CMO</span><h1>Что команда уже делает с ИИ?</h1><p>3-4 минуты: отметьте, что работает сейчас и где нужна помощь.</p></div></header>
+<main class="wrap"><p>Наши инструменты и любые аналоги одинаково подходят. Можно отвечать без точных цифр.</p><div class="twocol"><div class="row"><label for="name">Ваше имя</label><input id="name" autocomplete="name"></div><div class="row"><label for="team">Сервис / страна / команда</label><input id="team" placeholder="Например: Ride, Казахстан"></div></div><div id="app"></div>
+<section class="card"><h2>Что изменилось после ИИ-синка 28 октября?</h2><p class="lead">Выберите, где стали больше использовать ИИ. Можно несколько ответов.</p><div class="btns" id="changes"></div></section>
+<section class="card"><h2>Обращались в нашу ИИ-студию?</h2><div class="row"><select id="studio" aria-label="Опыт работы с ИИ-студией"><option value="">Выберите</option><option>Не обращались</option><option>Получили результат</option><option>Заказ в работе</option><option>Обращались, но не получилось</option><option>Не знаю об этой студии</option></select></div><input id="studioComment" aria-label="Впечатления от студии" placeholder="По желанию: как прошло или что хотите заказать"></section>
+<section class="card"><h2>Где можем помочь?</h2><div class="btns" id="help"></div><textarea id="helpComment" aria-label="Где нужна помощь" placeholder="По желанию: по какой задаче нужна помощь?"></textarea><details><summary>Добавить один результат внедрения</summary><textarea id="result" aria-label="Один результат внедрения" placeholder="Например: баннеры раньше заказывали, теперь делаем сами. Цифры, если знаете: было ... стало ..."></textarea></details></section>
+<p class="lead">Ответы сохраняются в этом браузере. В конце скопируйте их и пришлите Дарье в Telegram. Автоматической отправки пока нет.</p><p id="error" role="alert" style="color:#f00"></p></main>
+<div class="bar"><div class="wrap"><div class="progress" id="prog"></div><button class="sec" id="preview">Посмотреть ответы</button><button class="main" id="copy">Скопировать ответы</button></div></div>
+<dialog id="dlg"><h2>Ваши ответы</h2><textarea id="report" readonly></textarea><p>Скопируйте текст и пришлите Дарье в Telegram.</p><button class="sec" id="close">Закрыть</button></dialog><div class="toast" id="toast" role="status"></div><script>
+const BLOCKS=[
+{id:'ads',title:'Баннеры и короткие видео',hint:'Материалы для обычной рекламы и CRM.',tasks:[['banner','Баннеры: маркетолог делает через ИИ сам'],['video','Короткие рекламные видео создаём с ИИ']]},
+{id:'crm',title:'CRM-коммуникации',hint:'От заявки на рассылку до кампании, готовой к проверке и запуску.',tasks:[['request','ИИ собирает вводные и готовит заявку'],['setup','ИИ заполняет кампанию в системе рассылок']]},
+{id:'reports',title:'Отчёты и презентации',hint:'CRM-отчёты, месячные отчёты и презентации команды.',tasks:[['report','ИИ собирает данные и готовит отчёт']]},
+{id:'routine',title:'Повседневная рутина',hint:'Заявки на оплату, промокоды, брифы, согласования кампаний и оформление целей.',tasks:[['routine','ИИ помогает выполнять эти задачи']]},
+{id:'production',title:'Производство роликов и фото',hint:'Для крупных кампаний: через нашу ИИ-студию, своими силами или другого подрядчика.',tasks:[['film','Рекламные ролики производим с ИИ'],['photo','Рекламные фотографии создаём с ИИ']]}
+];
+const STATUS=['ИИ не используем','ИИ тестируем','ИИ используем в работе','Нет такой задачи','Не знаю'];
+const KEY='yango-ai-pulse-short-v1';let st={};try{st=JSON.parse(localStorage.getItem(KEY)||'{}')||{}}catch(e){}st.answers=st.answers||{};st.blocks=st.blocks||{};st.changes=st.changes||[];st.help=st.help||[];
+function save(){document.querySelector('#error').textContent='';try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}progress()}
+function field(el,obj,key,after){el.value=obj[key]||'';el.oninput=()=>{obj[key]=el.value;if(after)after();save()}}
+function multi(el,values,key,exclusive){values.forEach(v=>{const b=document.createElement('button');b.type='button';b.textContent=v;el.append(b);b.onclick=()=>{if(st[key].includes(v))st[key]=st[key].filter(x=>x!==v);else{if(exclusive.includes(v))st[key]=[];else st[key]=st[key].filter(x=>!exclusive.includes(x));st[key].push(v)}paint();save()};function paint(){el.querySelectorAll('button').forEach(x=>{const on=st[key].includes(x.textContent);x.classList.toggle('on',on);x.setAttribute('aria-pressed',String(on))})}paint()})}
+BLOCKS.forEach(b=>{
+ const s=st.blocks[b.id]||(st.blocks[b.id]={});const d=document.createElement('section');d.className='item';d.innerHTML='<h2>'+b.title+'</h2><p class="lead">'+b.hint+'</p>'+b.tasks.map(([id,label])=>'<div class="taskrow"><label for="task-'+id+'">'+label+'</label><select id="task-'+id+'"><option value="">Выберите</option>'+STATUS.map(v=>'<option>'+v+'</option>').join('')+'</select></div>').join('')+'<div class="tool-extra"><input class="toolname" aria-label="Инструмент: '+b.title+'" placeholder="По желанию: какой ИИ-инструмент или подрядчик?"></div><div class="reason-extra"><select class="reason" aria-label="Что мешает: '+b.title+'"><option value="">По желанию: что мешает начать?</option><option>Нужны доступы</option><option>Не знаем, как настроить</option><option>Не подходит качество</option><option>Дорого</option><option>Нет времени попробовать</option><option>Пока не видим пользы</option></select></div>';
+ document.querySelector('#app').append(d);
+ function branch(){const vals=b.tasks.map(([id])=>st.answers[id]);d.classList.toggle('hasai',vals.some(v=>['ИИ тестируем','ИИ используем в работе'].includes(v)));d.classList.toggle('manual',vals.includes('ИИ не используем'))}
+ b.tasks.forEach(([id])=>field(d.querySelector('#task-'+id),st.answers,id,branch));field(d.querySelector('.toolname'),s,'tool');field(d.querySelector('.reason'),s,'reason');branch();
+});
+['name','team','studio','studioComment','helpComment','result'].forEach(id=>field(document.querySelector('#'+id),st,id));
+multi(document.querySelector('#changes'),[...BLOCKS.map(b=>b.title),'Ничего нового','Не помню / не было на синке'],'changes',['Ничего нового','Не помню / не было на синке']);
+multi(document.querySelector('#help'),['Доступы','Настройка','Обучение','Качество / стоимость','Помощь не нужна'],'help',['Помощь не нужна']);
+function progress(){const n=BLOCKS.filter(b=>b.tasks.every(([id])=>st.answers[id])).length;document.querySelector('#prog').textContent='Заполнено '+n+' из 5 блоков'}
+function report(){let t='ИИ в маркетинге: пульс-опрос\n'+(st.name||'Без имени')+' | '+(st.team||'Команда не указана')+'\n\n';BLOCKS.forEach(b=>{t+=b.title+'\n';b.tasks.forEach(([id,label])=>t+=label+': '+(st.answers[id]||'Без ответа')+'\n');const s=st.blocks[b.id];if(b.tasks.some(([id])=>['ИИ тестируем','ИИ используем в работе'].includes(st.answers[id]))&&s.tool)t+='Инструмент: '+s.tool+'\n';if(b.tasks.some(([id])=>st.answers[id]==='ИИ не используем')&&s.reason)t+='Что мешает: '+s.reason+'\n';t+='\n'});return t+'Больше ИИ после 28 октября: '+(st.changes.join(', ')||'Без ответа')+'\nИИ-студия: '+(st.studio||'Без ответа')+(st.studioComment?' | '+st.studioComment:'')+'\nНужна помощь: '+(st.help.join(', ')||'Без ответа')+(st.helpComment?' | '+st.helpComment:'')+(st.result?'\nПример результата: '+st.result:'')}
+function preview(){document.querySelector('#report').value=report();document.querySelector('#dlg').showModal()}
+document.querySelector('#preview').onclick=preview;document.querySelector('#close').onclick=()=>document.querySelector('#dlg').close();
+document.querySelector('#copy').onclick=async()=>{if(!(st.name||'').trim()||!(st.team||'').trim()||BLOCKS.some(b=>b.tasks.some(([id])=>!st.answers[id]))||!st.changes.length||!st.studio||!st.help.length){document.querySelector('#error').textContent='Укажите имя, команду и выберите ответы в каждом блоке, включая изменения после синка, студию и помощь. Если не знаете, так и отметьте.';return}document.querySelector('#error').textContent='';try{await navigator.clipboard.writeText(report());const e=document.querySelector('#toast');e.textContent='Скопировано. Пришлите ответы Дарье в Telegram.';e.style.display='block';setTimeout(()=>e.style.display='none',3500)}catch(e){preview()}};progress();
+</script></body></html>
